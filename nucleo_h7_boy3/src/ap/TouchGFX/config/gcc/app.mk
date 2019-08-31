@@ -13,8 +13,8 @@ touchgfx_path := ../../lib/TouchGFX/touchgfx/
 # Location of the TouchGFX Environment
 touchgfx_env := D:/TouchGFX/4.10.0/env
 # Optional additional compiler flags
-user_cflags := -DUSE_BPP=24
-opaque_image_format := RGB888
+user_cflags := -DUSE_BPP=16
+opaque_image_format := RGB565
 non_opaque_image_format := ARGB8888
 dither_algorithm := 2
 alpha_dither := yes

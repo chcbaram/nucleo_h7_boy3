@@ -140,7 +140,7 @@ bool ltdcLayerInit(uint16_t LayerIndex, uint32_t Address)
   pLayerCfg.WindowY1 = LCD_HEIGHT;
 
   /* Pixel Format configuration*/
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB888;
+  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;
 
   /* Start Address configuration : frame buffer is located at FLASH memory */
   pLayerCfg.FBStartAdress = Address;

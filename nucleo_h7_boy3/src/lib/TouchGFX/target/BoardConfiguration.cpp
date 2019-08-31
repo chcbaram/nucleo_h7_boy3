@@ -36,7 +36,7 @@ DMA2D_HandleTypeDef hdma2d;
 }
 
 #if !defined(USE_BPP) || USE_BPP==16
-#define FRAMEBUFFER_SIZE  (RK043FN48H_WIDTH * RK043FN48H_HEIGHT * 2)
+#define FRAMEBUFFER_SIZE  (ltdcWidth() * ltdcHeight() * 2)
 #elif USE_BPP==24
 #define FRAMEBUFFER_SIZE  (ltdcWidth() * ltdcHeight() * 3)
 #else

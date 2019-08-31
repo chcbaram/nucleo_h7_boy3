@@ -444,7 +444,7 @@
       "Width": 320,
       "Height": 240
     },
-    "SelectedColorDepth": 24,
+    "SelectedColorDepth": 16,
     "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
@@ -455,11 +455,11 @@
       "Version": "1.0.0",
       "Description": "The board support package \"STM32H750 Discovery Kit\" has target compiler support for IAR and GCC.\nFlashing the board requires ST-Link Utility which can be downloaded from the ST webpage.\nThis BSP is based on a subset of the STM32CubeH7 driver package, version 1.4.0.\n\nFlashing the STM32H750 Discovery board from within the Designer requires STM32CubeProgrammer installed, which is available from the ST webpage.",
       "AvailableColorDepths": [
-        24
+        16
       ],
       "AvailableImageFormats": {
-        "24": {
-          "Opaque": "RGB888",
+        "16": {
+          "Opaque": "RGB565",
           "NonOpaque": "ARGB8888"
         }
       },
