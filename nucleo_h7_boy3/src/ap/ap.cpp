@@ -15,8 +15,6 @@
 
 void apInit(void)
 {
-  delay(100);
-  ledOn(_DEF_LED3);
   ledOn(_DEF_LED4);
   uartOpen(_DEF_UART1, 57600);
   cmdifOpen(_DEF_UART1, 57600);

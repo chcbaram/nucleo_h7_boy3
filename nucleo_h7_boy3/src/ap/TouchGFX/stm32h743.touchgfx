@@ -216,6 +216,20 @@
               "ActionComponent": "image1",
               "Type": "ActionMove"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "ButtonKey": 1,
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Screen2",
+              "Type": "ActionGotoScreen"
+            }
           }
         ],
         "Name": "Screen1",
@@ -330,7 +344,7 @@
             "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
             "Alpha": 255,
             "Name": "button2",
-            "X": 288,
+            "X": 216,
             "Y": 106,
             "Width": 60,
             "Height": 60,
@@ -418,6 +432,20 @@
             "Trigger": {
               "TriggerComponent": "buttonWithIcon1",
               "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "ButtonKey": 0,
+              "Type": "TriggerPhysicalButtonClicked"
             },
             "Action": {
               "ScreenTransitionType": "ScreenTransitionSlide",

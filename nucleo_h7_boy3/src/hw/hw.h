@@ -23,6 +23,8 @@
 #include "cmdif.h"
 #include "ltdc.h"
 #include "i2c.h"
+#include "swtimer.h"
+#include "button.h"
 
 
 void hwInit(void);

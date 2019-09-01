@@ -22,10 +22,15 @@ void hwInit(void)
   millisInit();
   delayInit();
   cmdifInit();
+  swtimerInit();
+
+  uartInit();
+  uartOpen(_DEF_UART1, 57600);
 
   ledInit();
+  buttonInit();
   ltdcInit();
-  uartInit();
   i2cInit();
-  uartOpen(_DEF_UART1, 57600);
+
+  logPrintf("Start...\n");
 }

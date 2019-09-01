@@ -21,6 +21,10 @@
 #include "cmsis_os.h"
 
 
+#define logPrintf(...)    printf(__VA_ARGS__)
+
+
+
 void bspInit(void);
 
 extern void delay(uint32_t ms);

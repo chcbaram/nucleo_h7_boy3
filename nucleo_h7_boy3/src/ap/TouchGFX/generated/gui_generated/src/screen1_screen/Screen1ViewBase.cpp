@@ -53,6 +53,18 @@ void Screen1ViewBase::setupScreen()
 
 }
 
+//Handles when a key is pressed
+void Screen1ViewBase::handleKeyEvent(uint8_t key)
+{
+    if(1 == key)
+    {
+        //Interaction2
+        //When hardware button 1 clicked change screen to Screen2
+        //Go to Screen2 with screen transition towards East
+        application().gotoScreen2ScreenSlideTransitionEast();
+    }
+}
+
 //Called when the screen is done with transition/load
 void Screen1ViewBase::afterTransition()
 {

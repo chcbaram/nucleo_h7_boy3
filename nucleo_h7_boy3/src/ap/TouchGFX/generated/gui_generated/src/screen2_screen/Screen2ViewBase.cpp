@@ -30,7 +30,7 @@ Screen2ViewBase::Screen2ViewBase() :
     textArea1.setLinespacing(0);
     textArea1.setTypedText(TypedText(T_SINGLEUSEID1));
 
-    button2.setXY(288, 106);
+    button2.setXY(216, 106);
     button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
 
     box2.setPosition(122, 209, 50, 50);
@@ -63,6 +63,18 @@ Screen2ViewBase::Screen2ViewBase() :
 void Screen2ViewBase::setupScreen()
 {
 
+}
+
+//Handles when a key is pressed
+void Screen2ViewBase::handleKeyEvent(uint8_t key)
+{
+    if(0 == key)
+    {
+        //Interaction2
+        //When hardware button 0 clicked change screen to Screen1
+        //Go to Screen1 with screen transition towards West
+        application().gotoScreen1ScreenSlideTransitionWest();
+    }
 }
 
 void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

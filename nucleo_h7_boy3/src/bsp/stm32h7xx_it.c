@@ -136,6 +136,7 @@ void DebugMon_Handler(void)
   * @retval None
   */
 extern void osSystickHandler(void);
+extern void swtimerISR(void);
 
 void SysTick_Handler(void)
 {

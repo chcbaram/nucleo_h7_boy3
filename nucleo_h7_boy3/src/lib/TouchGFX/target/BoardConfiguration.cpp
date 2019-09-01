@@ -10,6 +10,7 @@
 
 #include <STM32H750TouchController.hpp>
 #include <STM32H7Instrumentation.hpp>
+#include <BUTTON.hpp>
 
 /***********************************************************
  ******         24 Bits Per Pixel Support            *******
@@ -105,6 +106,7 @@ void hw_init()
 STM32H7DMA dma;
 STM32H750TouchController tc;
 STM32H7Instrumentation mcuInstr;
+ButtonSampler btnCtrl;
 
 #if !defined(USE_BPP) || USE_BPP==16
 static LCD16bpp display;
@@ -130,6 +132,8 @@ void touchgfx_init()
 
     hal.setTouchSampleRate(1);
     hal.setFingerSize(1);
+    hal.setButtonController(&btnCtrl);
+
 
     // By default frame rate compensation is off.
     // Enable frame rate compensation to smooth out animations in case there is periodic slow frame rates.
