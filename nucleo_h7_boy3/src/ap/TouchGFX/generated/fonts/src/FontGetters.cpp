@@ -14,7 +14,7 @@ touchgfx::InternalFlashFont& getFont_NanumGothicCoding_20_4bpp();
 
 touchgfx::InternalFlashFont& getFont_NanumGothicCoding_20_4bpp()
 {
-    static touchgfx::InternalFlashFont NanumGothicCoding_20_4bpp(glyphs_NanumGothicCoding_20_4bpp, 4, 20, 1, 4, 0, 0, unicodes_NanumGothicCoding_20_4bpp, kerning_NanumGothicCoding_20_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont NanumGothicCoding_20_4bpp(glyphs_NanumGothicCoding_20_4bpp, 1, 20, 1, 4, 0, 0, unicodes_NanumGothicCoding_20_4bpp, kerning_NanumGothicCoding_20_4bpp, 63, 0);
     return NanumGothicCoding_20_4bpp;
 }
 

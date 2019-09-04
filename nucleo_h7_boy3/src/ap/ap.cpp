@@ -15,7 +15,10 @@
 
 void apInit(void)
 {
-  ledOn(_DEF_LED4);
+  //ledOn(_DEF_LED4);
+
+  pwmWrite(0, 255);
+
   uartOpen(_DEF_UART1, 57600);
   cmdifOpen(_DEF_UART1, 57600);
 }

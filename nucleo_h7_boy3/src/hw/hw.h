@@ -25,6 +25,7 @@
 #include "i2c.h"
 #include "swtimer.h"
 #include "button.h"
+#include "pwm.h"
 
 
 void hwInit(void);

@@ -38,161 +38,14 @@
             "Moveable": false
           },
           {
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 291,
-                "Height": 123,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 0,
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Red": 0,
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Red": 0,
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ],
-            "Name": "flexButton1",
-            "X": 0,
-            "Y": 5,
-            "Width": 291,
-            "Height": 123,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
+            "RelativeFilename": "a2.png",
             "Alpha": 255,
-            "Name": "box2",
-            "X": 0,
-            "Y": 0,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box3",
-            "X": 0,
-            "Y": 0,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 255,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "Name": "box4",
-            "X": 15,
-            "Y": 180,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 0,
-              "Green": 255,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "Name": "box4_1",
-            "X": 98,
-            "Y": 180,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box4_1_1",
-            "X": 175,
-            "Y": 180,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "Name": "box4_1_1_1",
-            "X": 256,
-            "Y": 180,
-            "Width": 50,
-            "Height": 50,
-            "Type": "Box",
+            "Name": "Logo",
+            "X": 65,
+            "Y": 240,
+            "Width": 200,
+            "Height": 49,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -201,22 +54,6 @@
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "X": 11,
-              "Y": 57,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 500,
-              "ActionComponent": "image1",
-              "Type": "ActionMove"
-            }
-          },
           {
             "InteractionName": "Interaction2",
             "HasCompletedTrigger": false,
@@ -229,6 +66,22 @@
               "ScreenTransitionDirection": "East",
               "ActionComponent": "Screen2",
               "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 65,
+              "Y": 96,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 500,
+              "ActionComponent": "Logo",
+              "Type": "ActionMove"
             }
           }
         ],
@@ -258,113 +111,15 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_square_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_square_icon_button.png",
-            "Alpha": 255,
-            "IconPressed": "__designer\\blue_icons_home_32.png",
-            "IconReleased": "__designer\\blue_icons_home_32.png",
-            "IconX": 15,
-            "IconY": 16,
-            "IconHeight": 29,
-            "IconWidth": 30,
-            "ButtonStyle": "Style9",
-            "Name": "buttonWithIcon1",
-            "X": 420,
-            "Y": 0,
-            "Width": 60,
-            "Height": 60,
-            "Type": "ButtonWithIcon",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\blue_buttons_round_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_icon_button.png",
-            "Alpha": 255,
-            "Name": "button1",
-            "X": 66,
-            "Y": 106,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "Selected": false,
-            "Deselectable": false,
-            "FileNameSelected": "__designer\\blue_radio_buttons_radio_round_button_active.png",
-            "FileNameSelectedPressed": "__designer\\blue_radio_buttons_radio_round_button_normal.png",
-            "FileNameUnselected": "__designer\\blue_radio_buttons_radio_round_button_pressed.png",
-            "FileNameUnselectedPressed": "__designer\\blue_radio_buttons_radio_round_button_pressed.png",
-            "Name": "radioButton1",
-            "X": 432,
-            "Y": 223,
-            "Width": 44,
-            "Height": 44,
-            "Type": "RadioButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId1",
-            "TextRotation": "0",
             "Color": {
-              "Red": 0,
+              "Red": 255,
               "Green": 0,
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 396,
-            "Y": 233,
-            "Width": 36,
-            "Height": 24,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\blue_buttons_round_edge_icon_button_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_icon_button.png",
-            "Alpha": 255,
-            "Name": "button2",
-            "X": 216,
-            "Y": 106,
-            "Width": 60,
-            "Height": 60,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Alpha": 255,
-            "Name": "box2",
-            "X": 122,
-            "Y": 209,
+            "Name": "box4",
+            "X": 22,
+            "Y": 184,
             "Width": 50,
             "Height": 50,
             "Type": "Box",
@@ -376,24 +131,18 @@
           },
           {
             "Color": {
-              "Red": 250,
-              "Green": 50,
-              "Blue": 0
-            },
-            "BorderColor": {
               "Red": 0,
-              "Green": 0,
+              "Green": 255,
               "Blue": 0
             },
-            "BorderSize": 2,
             "Alpha": 255,
-            "Name": "boxWithBorder1",
-            "X": 140,
-            "Y": 234,
-            "Width": 32,
-            "Height": 27,
-            "Type": "BoxWithBorder",
-            "Visible": false,
+            "Name": "box4_1",
+            "X": 72,
+            "Y": 184,
+            "Width": 50,
+            "Height": 50,
+            "Type": "Box",
+            "Visible": true,
             "Draggable": false,
             "Clickable": false,
             "Fadeable": false,
@@ -401,24 +150,78 @@
           },
           {
             "Color": {
-              "Red": 250,
-              "Green": 50,
-              "Blue": 0
+              "Red": 0,
+              "Green": 0,
+              "Blue": 255
             },
-            "BorderColor": {
+            "Alpha": 255,
+            "Name": "box4_1_1",
+            "X": 122,
+            "Y": 184,
+            "Width": 50,
+            "Height": 50,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
               "Red": 0,
               "Green": 0,
               "Blue": 0
             },
-            "BorderSize": 2,
             "Alpha": 255,
-            "Name": "boxWithBorder1_1",
-            "X": 224,
-            "Y": 234,
-            "Width": 32,
-            "Height": 27,
-            "Type": "BoxWithBorder",
-            "Visible": false,
+            "Name": "box4_1_1_1",
+            "X": 172,
+            "Y": 184,
+            "Width": 50,
+            "Height": 50,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": false,
+            "BackgroundUnselected": "__designer\\blue_slider_vertical_small_slider3_vertical_round_edge_back.png",
+            "BackgroundSelected": "__designer\\blue_slider_vertical_small_slider3_vertical_round_edge_back.png",
+            "Indicator": "__designer\\blue_slider_vertical_small_indicators_slider3_vertical_round_edge_nob.png",
+            "BackgroundX": 7,
+            "BackgroundY": 3,
+            "IndicatorPos": 0,
+            "IndicatorMax": 125,
+            "IndicatorMin": 0,
+            "ValueMax": 100,
+            "ValueMin": 0,
+            "InitValue": 0,
+            "Name": "slider1",
+            "X": 260,
+            "Y": 31,
+            "Width": 34,
+            "Height": 179,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Filename": "a3.png",
+            "Alpha": 255,
+            "ScalingAlgorithm": "Bilinear Interpolation",
+            "Name": "scalableImage1",
+            "X": 97,
+            "Y": 31,
+            "Width": 73,
+            "Height": 120,
+            "Type": "ScalableImage",
+            "Visible": true,
             "Draggable": false,
             "Clickable": false,
             "Fadeable": false,
@@ -426,20 +229,6 @@
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "buttonWithIcon1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "Screen1",
-              "Type": "ActionGotoScreen"
-            }
-          },
           {
             "InteractionName": "Interaction2",
             "HasCompletedTrigger": false,
@@ -461,12 +250,6 @@
       }
     ],
     "CustomContainerDefinitions": [],
-    "TextEntries": [
-      {
-        "TextEntryId": "SingleUseId1",
-        "IsResource": false
-      }
-    ],
     "Name": "stm32h745",
     "Resolution": {
       "Width": 320,

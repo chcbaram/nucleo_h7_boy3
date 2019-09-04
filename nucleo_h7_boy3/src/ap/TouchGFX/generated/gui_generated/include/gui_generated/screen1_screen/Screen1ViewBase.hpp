@@ -9,7 +9,6 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 
@@ -32,14 +31,8 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::MoveAnimator< touchgfx::Image > image1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1;
-    touchgfx::Box box2;
-    touchgfx::Box box3;
-    touchgfx::Box box4;
-    touchgfx::Box box4_1;
-    touchgfx::Box box4_1_1;
-    touchgfx::Box box4_1_1_1;
+    touchgfx::Image image1;
+    touchgfx::MoveAnimator< touchgfx::Image > Logo;
 
 private:
 

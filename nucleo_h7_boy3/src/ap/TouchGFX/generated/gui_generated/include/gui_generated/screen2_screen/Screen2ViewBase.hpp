@@ -8,12 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
-#include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/RadioButton.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/RadioButtonGroup.hpp>
+#include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -33,27 +29,14 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::ButtonWithIcon buttonWithIcon1;
-    touchgfx::Button button1;
-    touchgfx::RadioButton radioButton1;
-    touchgfx::TextArea textArea1;
-    touchgfx::Button button2;
-    touchgfx::Box box2;
-    touchgfx::BoxWithBorder boxWithBorder1;
-    touchgfx::BoxWithBorder boxWithBorder1_1;
-    touchgfx::RadioButtonGroup<1> radioButtonGroup;
+    touchgfx::Box box4;
+    touchgfx::Box box4_1;
+    touchgfx::Box box4_1_1;
+    touchgfx::Box box4_1_1_1;
+    touchgfx::Slider slider1;
+    touchgfx::ScalableImage scalableImage1;
 
 private:
-
-    /*
-     * Callback Handler Declarations
-     */
-    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
-
-    /*
-     * Callback Declarations
-     */
-    touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
 };
 

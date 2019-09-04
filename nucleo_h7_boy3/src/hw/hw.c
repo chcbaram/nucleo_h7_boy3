@@ -31,6 +31,7 @@ void hwInit(void)
   buttonInit();
   ltdcInit();
   i2cInit();
+  pwmInit();
 
   logPrintf("Start...\n");
 }

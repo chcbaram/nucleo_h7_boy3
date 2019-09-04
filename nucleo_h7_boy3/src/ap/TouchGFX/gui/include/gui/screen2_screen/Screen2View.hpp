@@ -13,6 +13,7 @@ public:
     virtual void tearDownScreen();
     void showImage();
 
+    virtual void handleKeyEvent(uint8_t key);
     virtual void handleTickEvent();
 protected:
 };

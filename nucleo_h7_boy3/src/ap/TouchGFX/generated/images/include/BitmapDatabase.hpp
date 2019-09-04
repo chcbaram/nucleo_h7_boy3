@@ -6,17 +6,12 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_AI1_ID = 0; // Size: 300x129 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID = 1; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID = 2; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID = 3; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID = 4; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID = 5; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID = 6; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_ICONS_HOME_32_ID = 7; // Size: 30x29 pixels
-const uint16_t BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID = 8; // Size: 44x44 pixels
-const uint16_t BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID = 9; // Size: 44x44 pixels
-const uint16_t BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID = 10; // Size: 44x44 pixels
+const uint16_t BITMAP_A1_ID = 0; // Size: 200x49 pixels
+const uint16_t BITMAP_A2_ID = 1; // Size: 200x49 pixels
+const uint16_t BITMAP_A3_ID = 2; // Size: 73x120 pixels
+const uint16_t BITMAP_AI1_ID = 3; // Size: 300x129 pixels
+const uint16_t BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_EDGE_NOB_ID = 4; // Size: 34x54 pixels
+const uint16_t BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_EDGE_BACK_ID = 5; // Size: 20x172 pixels
 
 namespace BitmapDatabase
 {

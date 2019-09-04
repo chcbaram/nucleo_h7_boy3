@@ -4,60 +4,41 @@
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
 
-Screen2ViewBase::Screen2ViewBase() :
-    buttonCallback(this, &Screen2ViewBase::buttonCallbackHandler)
+Screen2ViewBase::Screen2ViewBase()
 {
     box1.setPosition(0, 0, 320, 240);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
 
-    buttonWithIcon1.setXY(420, 0);
-    buttonWithIcon1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_ICONS_HOME_32_ID), Bitmap(BITMAP_BLUE_ICONS_HOME_32_ID));
-    buttonWithIcon1.setIconXY(15, 16);
-    buttonWithIcon1.setAction(buttonCallback);
+    box4.setPosition(22, 184, 50, 50);
+    box4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
 
-    button1.setXY(66, 106);
-    button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
+    box4_1.setPosition(72, 184, 50, 50);
+    box4_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
 
-    radioButton1.setXY(432, 223);
-    radioButton1.setBitmaps(Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
-    radioButton1.setSelected(false);
-    radioButton1.setDeselectionEnabled(false);
+    box4_1_1.setPosition(122, 184, 50, 50);
+    box4_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 255));
 
-    textArea1.setXY(396, 233);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(TypedText(T_SINGLEUSEID1));
+    box4_1_1_1.setPosition(172, 184, 50, 50);
+    box4_1_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
-    button2.setXY(216, 106);
-    button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID));
+    slider1.setXY(260, 31);
+    slider1.setBitmaps(Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_EDGE_BACK_ID), Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_EDGE_BACK_ID), Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_EDGE_NOB_ID));
+    slider1.setupVerticalSlider(7, 3, 0, 0, 125);
+    slider1.setValueRange(0, 100);
+    slider1.setValue(0);
 
-    box2.setPosition(122, 209, 50, 50);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-
-    boxWithBorder1.setPosition(140, 234, 32, 27);
-    boxWithBorder1.setVisible(false);
-    boxWithBorder1.setColor(touchgfx::Color::getColorFrom24BitRGB(250, 50, 0));
-    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    boxWithBorder1.setBorderSize(2);
-
-    boxWithBorder1_1.setPosition(224, 234, 32, 27);
-    boxWithBorder1_1.setVisible(false);
-    boxWithBorder1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(250, 50, 0));
-    boxWithBorder1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    boxWithBorder1_1.setBorderSize(2);
+    scalableImage1.setBitmap(Bitmap(BITMAP_A3_ID));
+    scalableImage1.setPosition(97, 31, 73, 120);
+    scalableImage1.setScalingAlgorithm(ScalableImage::BILINEAR_INTERPOLATION);
 
     add(box1);
-    add(buttonWithIcon1);
-    add(button1);
-    add(radioButton1);
-    add(textArea1);
-    add(button2);
-    add(box2);
-    add(boxWithBorder1);
-    add(boxWithBorder1_1);
-    radioButtonGroup.add(radioButton1);
+    add(box4);
+    add(box4_1);
+    add(box4_1_1);
+    add(box4_1_1_1);
+    add(slider1);
+    add(scalableImage1);
 }
 
 void Screen2ViewBase::setupScreen()
@@ -74,24 +55,5 @@ void Screen2ViewBase::handleKeyEvent(uint8_t key)
         //When hardware button 0 clicked change screen to Screen1
         //Go to Screen1 with screen transition towards West
         application().gotoScreen1ScreenSlideTransitionWest();
-    }
-}
-
-void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
-{
-    if (&src == &buttonWithIcon1)
-    {
-        //Interaction1
-        //When buttonWithIcon1 clicked change screen to Screen1
-        //Go to Screen1 with screen transition towards West
-        application().gotoScreen1ScreenSlideTransitionWest();
-    }
-    else if (&src == &button1)
-    {
-
-    }
-    else if (&src == &button2)
-    {
-
     }
 }

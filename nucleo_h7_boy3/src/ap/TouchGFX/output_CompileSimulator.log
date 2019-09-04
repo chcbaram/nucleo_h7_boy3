@@ -1,3 +1,17 @@
 Converting images
-Compiling generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp
-Linking build/bin/simulator.exe
+Compiling gui/src/screen2_screen/Screen2View.cpp
+Compiling generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp
+gui/src/screen2_screen/Screen2View.cpp: In member function 'virtual void Screen2View::setupScreen()':
+gui/src/screen2_screen/Screen2View.cpp:16:33: error: 'pwmRead' was not declared in this scope
+   slider1.setValue(map(pwmRead(0), 0, 255, 0, 100));
+                                 ^
+gui/src/screen2_screen/Screen2View.cpp:16:50: error: 'map' was not declared in this scope
+   slider1.setValue(map(pwmRead(0), 0, 255, 0, 100));
+                                                  ^
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
+make[1]: *** [generate_assets] Error 2
+simulator/gcc/Makefile:40: recipe for target 'all' failed
+make: *** [all] Error 2

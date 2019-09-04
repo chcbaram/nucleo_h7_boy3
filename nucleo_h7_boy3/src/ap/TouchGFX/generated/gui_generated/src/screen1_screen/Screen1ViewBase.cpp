@@ -13,39 +13,12 @@ Screen1ViewBase::Screen1ViewBase()
     image1.setXY(11, 240);
     image1.setBitmap(Bitmap(BITMAP_AI1_ID));
 
-    flexButton1.setBoxWithBorderPosition(0, 0, 291, 123);
-    flexButton1.setBorderSize(5);
-    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(0, 102, 153), touchgfx::Color::getColorFrom24BitRGB(0, 153, 204), touchgfx::Color::getColorFrom24BitRGB(0, 51, 102), touchgfx::Color::getColorFrom24BitRGB(51, 102, 153));
-    flexButton1.setPosition(0, 5, 291, 123);
-    flexButton1.setAlpha(0);
-
-    box2.setPosition(0, 0, 50, 50);
-    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-
-    box3.setPosition(0, 0, 50, 50);
-    box3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-
-    box4.setPosition(15, 180, 50, 50);
-    box4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
-
-    box4_1.setPosition(98, 180, 50, 50);
-    box4_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 0));
-
-    box4_1_1.setPosition(175, 180, 50, 50);
-    box4_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 255));
-
-    box4_1_1_1.setPosition(256, 180, 50, 50);
-    box4_1_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    Logo.setXY(65, 240);
+    Logo.setBitmap(Bitmap(BITMAP_A2_ID));
 
     add(box1);
     add(image1);
-    add(flexButton1);
-    add(box2);
-    add(box3);
-    add(box4);
-    add(box4_1);
-    add(box4_1_1);
-    add(box4_1_1_1);
+    add(Logo);
 }
 
 void Screen1ViewBase::setupScreen()
@@ -68,9 +41,9 @@ void Screen1ViewBase::handleKeyEvent(uint8_t key)
 //Called when the screen is done with transition/load
 void Screen1ViewBase::afterTransition()
 {
-    //Interaction1
-    //When screen is entered move image1
-    //Move image1 to x:11, y:57 with LinearIn easing in 500 ms (30 Ticks)
-    image1.clearMoveAnimationEndedAction();
-    image1.startMoveAnimation(11, 57, 30, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
+    //Interaction3
+    //When screen is entered move Logo
+    //Move Logo to x:65, y:96 with LinearIn easing in 500 ms (30 Ticks)
+    Logo.clearMoveAnimationEndedAction();
+    Logo.startMoveAnimation(65, 96, 30, EasingEquations::linearEaseIn, EasingEquations::linearEaseIn);
 }
