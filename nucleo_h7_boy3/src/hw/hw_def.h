@@ -18,6 +18,7 @@
 #define _USE_HW_MILLIS
 #define _USE_HW_DELAY
 #define _USE_HW_SDRAM
+#define _USE_HW_RTOS
 
 
 #define _USE_HW_SWTIMER

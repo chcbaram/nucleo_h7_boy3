@@ -11,7 +11,6 @@
 #include "main.h"
 
 
-
 #define configAP_TASK_PRIORITY                 ( tskIDLE_PRIORITY + 3 )
 #define configAP_TASK_STK_SIZE                 ( 4096 / 4 )
 

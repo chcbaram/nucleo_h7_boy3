@@ -118,6 +118,7 @@ static uint16_t bitDepth = 24;
 #error Unknown USE_BPP
 #endif
 
+
 void touchgfx_init()
 {
     uint16_t dispWidth  = LCD_GetXSize();
@@ -147,5 +148,7 @@ void touchgfx_init()
     //Set MCU instrumentation and Load calculation
     hal.setMCUInstrumentation(&mcuInstr);
     hal.enableMCULoadCalculation(true);
+
+    hal.disableInterrupts();
 }
 }

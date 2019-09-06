@@ -5,6 +5,7 @@
 
 #include "stm32h7xx.h"
 #include "stm32h7xx_hal_ltdc.h"
+#include "ltdc.h"
 
 #include <STM32H7HAL.hpp>
 #include <STM32H7DMA.hpp>
@@ -94,7 +95,7 @@ void STM32H7HAL::flushFrameBuffer(const touchgfx::Rect& rect)
     // thus we have to both flush and invalidate the Dcache prior to letting
     // DMA2D accessing it. That's done using SCB_CleanInvalidateDCache().
     HAL::flushFrameBuffer(rect);
-    //SCB_CleanInvalidateDCache();
+    SCB_CleanInvalidateDCache();
 }
 
 extern "C"
@@ -103,6 +104,7 @@ void HAL_LTDC_LineEvenCallback(LTDC_HandleTypeDef* hltdc)
     if (LTDC->LIPCR == lcd_int_active_line)
     {
         //entering active area
+        ltdcEnterActiveArea();
         HAL_LTDC_ProgramLineEvent(hltdc, lcd_int_porch_line);
         HAL::getInstance()->vSync();
         OSWrappers::signalVSync();
@@ -115,6 +117,7 @@ void HAL_LTDC_LineEvenCallback(LTDC_HandleTypeDef* hltdc)
     else
     {
         //exiting active area
+        ltdcExitActiveArea();
         HAL_LTDC_ProgramLineEvent(hltdc, lcd_int_active_line);
         GPIO::clear(GPIO::VSYNC_FREQ);
         HAL::getInstance()->frontPorchEntered();

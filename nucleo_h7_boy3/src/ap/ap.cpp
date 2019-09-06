@@ -12,7 +12,6 @@
 
 
 
-
 void apInit(void)
 {
   //ledOn(_DEF_LED4);

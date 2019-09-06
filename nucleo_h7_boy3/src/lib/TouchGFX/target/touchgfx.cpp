@@ -65,3 +65,8 @@ int touchgfxMain(void)
 
     return 0;
 }
+
+void touchgfxDisable(void)
+{
+  touchgfx::HAL::getInstance()->disableInterrupts();
+}

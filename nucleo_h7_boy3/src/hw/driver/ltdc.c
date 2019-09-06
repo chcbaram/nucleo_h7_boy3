@@ -35,7 +35,7 @@
 
 
 LTDC_HandleTypeDef hltdc;
-
+bool ltdc_request_draw = false;
 
 
 bool ltdcInit(void)
@@ -191,8 +191,20 @@ uint32_t ltdcGetBufferAddr(uint8_t index)
   return 0x24000000;
 }
 
+bool ltdcDrawAvailable(void)
+{
+  return ltdc_request_draw;
+}
 
+void ltdcEnterActiveArea(void)
+{
+  ltdc_request_draw = false;
+}
 
+void ltdcExitActiveArea(void)
+{
+  ltdc_request_draw = true;
+}
 
 
 /** @defgroup HAL_MSP_Private_Functions

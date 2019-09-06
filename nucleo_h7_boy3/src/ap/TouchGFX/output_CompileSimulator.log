@@ -1,6 +1,11 @@
-Converting images
-Compiling gui/src/screen2_screen/Screen2View.cpp
-Compiling generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp
+Compiling gui/src/screen3_screen/Screen3View.cpp
+Compiling gui/src/screen4_screen/Screen4View.cpp
+Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
+Compiling simulator/main.cpp
+gui/src/screen3_screen/Screen3View.cpp: In member function 'virtual void Screen3View::setupScreen()':
+gui/src/screen3_screen/Screen3View.cpp:22:23: error: 'millis' was not declared in this scope
+     pre_time = millis();
+                       ^
 gui/src/screen2_screen/Screen2View.cpp: In member function 'virtual void Screen2View::setupScreen()':
 gui/src/screen2_screen/Screen2View.cpp:16:33: error: 'pwmRead' was not declared in this scope
    slider1.setValue(map(pwmRead(0), 0, 255, 0, 100));
@@ -8,9 +13,17 @@ gui/src/screen2_screen/Screen2View.cpp:16:33: error: 'pwmRead' was not declared 
 gui/src/screen2_screen/Screen2View.cpp:16:50: error: 'map' was not declared in this scope
    slider1.setValue(map(pwmRead(0), 0, 255, 0, 100));
                                                   ^
+gui/src/screen4_screen/Screen4View.cpp: In member function 'virtual void Screen4View::setupScreen()':
+gui/src/screen4_screen/Screen4View.cpp:23:23: error: 'millis' was not declared in this scope
+     pre_time = millis();
+                       ^
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen4_screen/Screen4View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen4_screen/Screen4View.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
 simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o' failed
 make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o] Error 1
-make[2]: *** Waiting for unfinished jobs....
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3View.o] Error 1
 simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
 make[1]: *** [generate_assets] Error 2
 simulator/gcc/Makefile:40: recipe for target 'all' failed

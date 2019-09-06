@@ -36,6 +36,13 @@ void Screen1ViewBase::handleKeyEvent(uint8_t key)
         //Go to Screen2 with screen transition towards East
         application().gotoScreen2ScreenSlideTransitionEast();
     }
+    if(3 == key)
+    {
+        //Interaction4
+        //When hardware button 3 clicked change screen to Screen3
+        //Go to Screen3 with screen transition towards South
+        application().gotoScreen3ScreenSlideTransitionSouth();
+    }
 }
 
 //Called when the screen is done with transition/load

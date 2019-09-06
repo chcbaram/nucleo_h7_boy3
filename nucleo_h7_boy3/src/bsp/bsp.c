@@ -22,8 +22,8 @@ void bspInit(void)
   HAL_Init();
 
 
-  //SCB_EnableICache();
-  //SCB_EnableDCache();
+  SCB_EnableICache();
+  SCB_EnableDCache();
 
   SystemClock_Config();
 

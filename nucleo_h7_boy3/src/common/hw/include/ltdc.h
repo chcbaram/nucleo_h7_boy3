@@ -18,6 +18,9 @@
 
 
 bool ltdcInit(void);
+bool ltdcDrawAvailable(void);
+void ltdcEnterActiveArea(void);
+void ltdcExitActiveArea(void);
 uint32_t ltdcWidth(void);
 uint32_t ltdcHeight(void);
 uint32_t ltdcGetBufferAddr(uint8_t index);
