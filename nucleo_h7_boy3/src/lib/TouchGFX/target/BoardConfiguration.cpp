@@ -148,7 +148,5 @@ void touchgfx_init()
     //Set MCU instrumentation and Load calculation
     hal.setMCUInstrumentation(&mcuInstr);
     hal.enableMCULoadCalculation(true);
-
-    hal.disableInterrupts();
 }
 }

@@ -26,7 +26,7 @@
 #include "swtimer.h"
 #include "button.h"
 #include "pwm.h"
-
+#include "core/resize.h"
 
 void hwInit(void);
 

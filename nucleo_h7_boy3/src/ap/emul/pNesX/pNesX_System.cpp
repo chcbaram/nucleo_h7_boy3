@@ -23,8 +23,13 @@ extern int pNesX_Filer();
 extern void ApuMute(bool mute);
 
 
+#define _USE_RESIZE     0
 
 
+#if _USE_RESIZE == 1
+static uint16_t frame_buf[240*256] __attribute__((section(".sram_d2")));
+static uint16_t lcd_buf[320*240] __attribute__((section(".sram_d2")));
+#endif
 
 extern WORD LineData[][256];
 extern WORD *pDrawData;
@@ -398,6 +403,8 @@ void pNesX_LoadFrame()
  *  Transfer the contents of work frame on the screen
  *
  */
+
+
 #if defined(SHOW_FPS)
     fps++;
     
@@ -417,6 +424,26 @@ void pNesX_LoadFrame()
     }
 
     //lcdRequestDraw();
+
+#if _USE_RESIZE == 1
+    resize_image_t src, dest;
+
+    src.w = 256;
+    src.h = 240;
+    src.p_data = frame_buf;
+
+    dest.w = 320;
+    dest.h = 240;
+    dest.p_data = lcd_buf;
+
+    uint32_t pre_time;
+
+    pre_time = micros();
+    //resizeImage(&src, &dest);
+    //resizeImageNearest(&src, &dest);
+    resizeImageFast(&src, &dest);
+    printf("%d us\n", micros()-pre_time);
+#endif
 }
 
 
@@ -432,6 +459,8 @@ void pNesX_TransmitLinedata()
   //HAL_SPI_Transmit_DMA(&SpiHandle, (uint8_t *)pDrawData, 256 * 2);
 #endif
 
+
+
   uint16_t *p_lcd = (uint16_t*)LTDC_Layer1->CFBAR;
 
 
@@ -441,9 +470,22 @@ void pNesX_TransmitLinedata()
     for(int i=0; i<256; i++)
     {
       //gb.display.drawPixel(72+i, PPU_Scanline, (Color)p_data[i]);
+#if _USE_RESIZE == 1
+      frame_buf[PPU_Scanline*256 + i] = p_data[i];
+#else
       p_lcd[PPU_Scanline*320 + i + (320-256)/2] = p_data[i];
+#endif
     }
+
+#if _USE_RESIZE == 1
+    for(int i=0; i<320; i++)
+    {
+      p_lcd[PPU_Scanline*320 + i] = lcd_buf[PPU_Scanline*320 + i];
+    }
+#endif
   }
+
+
 
   /*
   if (refresh_draw == true)

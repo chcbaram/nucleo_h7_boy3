@@ -13,7 +13,7 @@
 
 
 
-#define FRAME_BUF_ADDR        0x24000000
+#define FRAME_BUF_ADDR        (0x24000000)
 
 #define LCD_WIDTH             ((uint16_t)320)          /* LCD PIXEL WIDTH            */
 #define LCD_HEIGHT            ((uint16_t)240)          /* LCD PIXEL HEIGHT           */
@@ -108,7 +108,7 @@ bool ltdcInit(void)
 
   uint8_t *p_data = (uint8_t *)FRAME_BUF_ADDR;
 
-  for (int i=0; i<LCD_WIDTH*LCD_HEIGHT*3; i++)
+  for (int i=0; i<LCD_WIDTH*LCD_HEIGHT*2; i++)
   {
     p_data[i] = 0;
   }
@@ -188,7 +188,7 @@ uint32_t ltdcHeight(void)
 
 uint32_t ltdcGetBufferAddr(uint8_t index)
 {
-  return 0x24000000;
+  return FRAME_BUF_ADDR;
 }
 
 bool ltdcDrawAvailable(void)
